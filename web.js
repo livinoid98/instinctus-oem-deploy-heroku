@@ -3,7 +3,7 @@ const path = require('path');
 const multer = require('multer');
 const fs = require('fs');
 const app = express();
-const port = 8001;
+const port = process.env.PORT;
 
 app.use('/', express.static(path.join(__dirname, 'views')));
 app.use('/css', express.static(__dirname + '/css'));
