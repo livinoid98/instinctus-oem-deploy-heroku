@@ -1,0 +1,52 @@
+.list-wrap {
+  width: 100%;
+}
+.list-wrap h3 {
+  padding-top: 60px;
+  margin-left: 20px;
+  margin-bottom: 44px;
+  font-size: 36px;
+  font-weight: 700;
+  color: #474747;
+}
+.list-wrap table {
+  width: 86%;
+  margin: 0 auto;
+  text-align: center;
+}
+.list-wrap table thead th {
+  font-size: 13px;
+  font-weight: 600;
+  color: #797979;
+  padding: 20px;
+}
+.list-wrap table tbody tr {
+  border-top: 2px solid #EFEFEF;
+}
+.list-wrap table tbody tr:nth-child(2n) {
+  text-align: left;
+}
+.list-wrap table tbody tr td {
+  font-size: 13px;
+  font-weight: 400;
+  color: #9f9f9f;
+  padding: 20px;
+}
+.list-wrap .write-button-wrap {
+  width: 86%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-end;
+}
+.list-wrap .write-button-wrap button {
+  width: 80px;
+  height: 22px;
+  background-color: #4c4a4a;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  margin-right: 4px;
+}/*# sourceMappingURL=list.css.map */

@@ -3,7 +3,7 @@ const path = require('path');
 const multer = require('multer');
 const fs = require('fs');
 const app = express();
-const port = process.env.PORT;
+const port = 8001;//process.env.PORT;
 
 app.use('/', express.static(path.join(__dirname, 'views')));
 app.use('/css', express.static(__dirname + '/css'));
@@ -49,7 +49,7 @@ app.get('/contactus', (req,res)=>{
 });
 
 app.post('/contact', function(req,res,next){
-    let contact_info = req.body.name + ' ' + req.body.email + ' ' + req.body.title + ' ' + req.body.content + ' /';
+    let contact_info = req.body.name + '№' + req.body.email + '№' + req.body.title + '№' + req.body.content + '㏇';
     
     fs.appendFile('./formList.txt', contact_info, (err) => {
         if(err){
@@ -66,7 +66,20 @@ app.get('/list', function(req,res,next){
         if(err){
             console.log(err);
         }else{
-            return res.render('list.ejs', {data: data.split('/')});
+            let arrayTxt = data.split('㏇');
+            let arrayName = [];
+            let arrayEmail = [];
+            let arrayTitle = [];
+            let arrayDescription = [];
+            for(let i=0; i<arrayTxt.length; i++){
+                let column = arrayTxt[i].split('№');
+                arrayName.push(column[0]);
+                arrayEmail.push(column[1]);
+                arrayTitle.push(column[2]);
+                arrayDescription.push(column[3]);
+            }
+            console.log(arrayName, arrayEmail, arrayTitle, arrayDescription);
+            return res.render('list.ejs', {name: arrayName, email:arrayEmail, title:arrayTitle, content: arrayDescription});
         }
     });
 });
