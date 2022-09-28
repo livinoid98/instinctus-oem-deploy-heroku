@@ -58,7 +58,7 @@ app.post('/contact', function(req,res,next){
             console.log('write file success');
         }
     });
-    res.redirect('/');
+    res.redirect('/list');
 });
 
 app.get('/list', function(req,res,next){

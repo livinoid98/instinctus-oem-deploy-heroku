@@ -71,6 +71,7 @@ footer .footer-center-wrap {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  overflow-x: hidden;
 }
 footer .footer-center-wrap .footer-section-wrap .footer-content .call-wrap {
   padding-top: 140px;
@@ -89,6 +90,7 @@ footer .footer-center-wrap .footer-section-wrap .footer-content .call-wrap .call
 footer .footer-center-wrap .footer-section-wrap .footer-info {
   display: flex;
   margin-top: 42px;
+  overflow-x: hidden;
 }
 footer .footer-center-wrap .footer-section-wrap .footer-info .instinctus-info h5 {
   font-size: 18px;

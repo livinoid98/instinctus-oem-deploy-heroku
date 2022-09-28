@@ -18,19 +18,40 @@
                 font-weight:600;
                 color:#797979;
                 padding:20px;
+                &:nth-child(1){
+                    width:20%;
+                }
+                &:nth-child(2){
+                    width:60%;
+                }
+                &:nth-child(3){
+                    width:20%;
+                }
             }
         }
         tbody{
             tr{
                 border-top: 2px solid #EFEFEF;
                 &:nth-child(2n){
+                    width:100%;
                     text-align:left;
+                    border-top:none;
+                    padding-top:40px;
                 }
                 td{
                     font-size: 13px;
                     font-weight:400;
                     color: #9f9f9f;
                     padding:20px;
+                    &:nth-child(1){
+                        width:20%;
+                    }
+                    &:nth-child(2){
+                        width:60%;
+                    }
+                    &:nth-child(3){
+                        width:20%;
+                    }
                 }
             }
         }
@@ -40,6 +61,7 @@
         margin:0 auto;
         display: flex;
         justify-content:flex-end;
+        margin-bottom:26px;
         button{
             width: 80px;
             height: 22px;
